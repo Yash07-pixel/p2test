@@ -58,4 +58,54 @@ Test passes
 
 
 
-pom file 
+exp 6
+✅ JENKINS PIPELINE EXPERIMENT
+🔹 1. Open Jenkins
+Go to:
+http://localhost:8080
+🔹 2. Create Job
+Click New Item
+Name: Pipeline-CI
+Select Pipeline
+Click OK
+🔹 3. Add Pipeline Script
+
+👉 Scroll to Pipeline section
+👉 Select Pipeline script
+
+👉 Paste this (corrected):
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building Project...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running Tests...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Application...'
+            }
+        }
+    }
+}
+🔹 4. Save
+Click Save
+🔹 5. Run Pipeline
+Click Build Now
+🔹 6. Check Output
+Click build number
+Click Console Output
+🔹 7. Verify
+Build stage ✅
+Test stage ✅
+Deploy stage ✅
