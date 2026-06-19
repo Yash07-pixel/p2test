@@ -113,4 +113,3 @@ Test stage ✅
 
 docker build -t gradle-web:latest .
 docker run -d -p 8090:80 --name gradle-container gradle-web:latest
-Deploy stage ✅
