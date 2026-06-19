@@ -108,4 +108,9 @@ Click Console Output
 🔹 7. Verify
 Build stage ✅
 Test stage ✅
+
+✅ EXPERIMENT 8– FINAL STEPS
+
+docker build -t gradle-web:latest .
+docker run -d -p 8090:80 --name gradle-container gradle-web:latest
 Deploy stage ✅
